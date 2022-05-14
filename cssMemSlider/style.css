@@ -4,9 +4,13 @@
 }
 body{
   background: #9d9d9e;
+  height: 98vh;
 }
 .wrapper{
-  margin: 2rem;
+  margin: 1rem;
+}
+input {
+  height: 0rem;  
 }
 .view-media{
   margin: 2rem auto;
@@ -27,12 +31,11 @@ body{
 }
 .overflow {
   overflow: hidden;
-  overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
 .slider-block {
-  margin: 2rem auto;
+  margin: 0 auto;
   width: 15rem;
   height: 15rem;
   overflow: hidden;
@@ -53,20 +56,17 @@ body{
 .slider {
   display: flex;
   width: 120rem;
+  transition: all 1s;
 }
 @media only screen and (min-width: 871px) {
   .slider {
     width: 200rem;
-    height: 200rem;
   }
 }
 .slide {
   width: 15rem;
   height: 15rem;
   background-size: cover;
-  transform-origin: center center;
-  transform: scale(1);
-  scroll-snap-align: center;
 }
 @media only screen and (min-width: 531px) {
   .slide {
@@ -84,7 +84,8 @@ body{
   max-width: 11rem;
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0 2rem auto;
+  align-items: center;
+  margin: 2rem auto;
   gap: 1.5rem;
 }
 @media only screen and (min-width: 871px) {
@@ -93,16 +94,23 @@ body{
   }
 }
 .navigation-button {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
-  background: #7e54cc;
+  background: #f52d2d;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: 0.1rem solid #f52d2d;
+
 }
 .navigation-button:hover {
-  background: #54ccc2;
+  background: #f1e9e9;
+  border: 0.1rem solid #f52d2d;
+}
+.navigation-button:active {
+  background: #9d9d9e;
 }
 .navigation-button span{
   height: 3.5rem;
@@ -111,28 +119,24 @@ body{
   position: absolute;
 }
 .lable-block {
+  overflow: hidden;
   margin: 2rem auto;
   width: 30rem;
-
-  /* overflow: hidden; */
 }
 @media only screen and (min-width: 871px) {
   .lable-block {
-    margin: 2.5rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
 }
 .lables-for-imges {
   display: flex;
-  width: 400%
+  width: 400%;
+  transition: all 1s;
 }
 .lable {
   width: 30rem;
-  transform-origin: center center;
-  transform: scale(1);
-  scroll-snap-align: center;
   font-size: 1.5em;
 }
-
 @media only screen and (min-width: 871px) {
   .lable {
     font-size: 2em;
@@ -144,14 +148,38 @@ body{
   }
 }
 #first-img{
-  background-image: url(./Img/first.jpg);
+  background-image: url(./img/first.jpg);
 }
 #second-img{
-  background-image: url(./Img/second.jpg);
+  background-image: url(./img/second.jpg);
 }
 #third-img{
-  background-image: url(./Img/third.jpg);
+  background-image: url(./img/third.jpg);
 }
 #fourth-img{
-  background-image: url(./Img/fourth.jpg);
+  background-image: url(./img/fourth.jpg);
+}
+#radio-1:checked~ .slider-block .slider {
+    margin-left: 0;
+}
+#radio-1:checked~ .view-media .lables-for-imges {
+  margin-left: 0;
+}
+#radio-2:checked~ .slider-block .slider {
+    margin-left: -100%;
+}
+#radio-2:checked~ .view-media .lables-for-imges {
+  margin-left: -100%;
+}
+#radio-3:checked~ .slider-block .slider {
+    margin-left: -200%;
+}
+#radio-3:checked~ .view-media .lables-for-imges {
+  margin-left: -200%;
+}
+#radio-4:checked~ .slider-block .slider  {
+    margin-left: -300%;
+}
+#radio-4:checked~ .view-media .lables-for-imges {
+  margin-left: -300%;
 }
