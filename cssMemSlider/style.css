@@ -4,16 +4,13 @@
 }
 body{
   background: #9d9d9e;
-  height: 98vh;
-}
-.wrapper{
-  margin: 1rem;
+  height: 95vh;
 }
 input {
   height: 0rem;  
 }
 .view-media{
-  margin: 2rem auto;
+  margin: 0rem auto;
   width: 15rem;
 }
 @media only screen and (min-width: 531px) {
