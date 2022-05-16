@@ -82,7 +82,6 @@ input {
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
-  /* gap: 0.5rem; */
 }
 @media only screen and (min-width: 871px) {
   .navigation-block {
@@ -93,21 +92,14 @@ input {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 50%;
-  background: #f52d2d;
+  background-color: #f52d2d;
   display: block;
   cursor: pointer;
-  border: 0.2rem solid #f52d2d;
+	border-width: 0.2rem;
+  border-color: #f52d2d;
+  border-style: solid;
+}
 
-}
-.navigation-button:hover .span{
-  background: #f1e9e9;
-  border: 0.2rem solid #f52d2d;
-}
-.navigation-button:active span{
-  height: 1.5rem;
-  width: 1.5rem;
-	border: 0.2em dashed #f52d2d !important; 
-}
 .navigation-button{
   display: flex;
   justify-content: center;
@@ -160,12 +152,8 @@ input {
 #radio-1:checked~ .slider-block .slider {
     margin-left: 0;
 }
-#radio-1:checked~ .view-media .navigation-block .navigation-button .span-1 {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  background: #f1e9e9;
-  border: 0.2rem solid #f52d2d;
+#radio-1:checked~ .view-media .navigation-button:nth-child(1) span {
+  background-color: #ffffff;
 }
 #radio-1:checked~ .view-media .lables-for-imges {
   margin-left: 0;
@@ -176,12 +164,8 @@ input {
 #radio-2:checked~ .view-media .lables-for-imges {
   margin-left: -100%;
 }
-#radio-2:checked~ .view-media .navigation-block .navigation-button .span-2 {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  background: #f1e9e9;
-  border: 0.2rem solid #f52d2d;
+#radio-2:checked~ .view-media .navigation-button:nth-child(2) span {
+  background-color: #ffffff;
 }
 #radio-3:checked~ .slider-block .slider {
     margin-left: -200%;
@@ -189,12 +173,8 @@ input {
 #radio-3:checked~ .view-media .lables-for-imges {
   margin-left: -200%;
 }
-#radio-3:checked~ .view-media .navigation-block .navigation-button .span-3 {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  background: #f1e9e9;
-  border: 0.2rem solid #f52d2d;
+#radio-3:checked~ .view-media .navigation-button:nth-child(3) span { 
+  background-color: #ffffff;
 }
 #radio-4:checked~ .slider-block .slider  {
     margin-left: -300%;
@@ -202,10 +182,18 @@ input {
 #radio-4:checked~ .view-media .lables-for-imges {
   margin-left: -300%;
 }
-#radio-4:checked~ .view-media .navigation-block .navigation-button .span-4 {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  background: #f1e9e9;
-  border: 0.2rem solid #f52d2d;
+#radio-4:checked~ .view-media .navigation-button:nth-child(4) span {
+  background-color: #ffffff;
+}
+
+.navigation-button:hover span{
+  background-color: #74e8ea  !important
+}
+
+.wrapper .view-media .navigation-block label.navigation-button span{
+
+}
+
+body .wrapper .view-media .navigation-block label.navigation-button:active span{
+  background-color: #ff1818  !important;
 }
