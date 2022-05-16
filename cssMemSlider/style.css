@@ -120,7 +120,6 @@ input {
 .lable-block {
   overflow: hidden;
   margin: 2rem auto;
-  width: 30rem;
 }
 @media only screen and (min-width: 871px) {
   .lable-block {
@@ -133,8 +132,8 @@ input {
   transition: all 1s;
 }
 .lable {
-  width: 30rem;
-  font-size: 1.5em;
+  width: 35rem;
+  font-size: 1em;
 }
 @media only screen and (min-width: 871px) {
   .lable {
